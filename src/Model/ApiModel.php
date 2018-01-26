@@ -6,8 +6,8 @@ use GuzzleHttp\Client;
 
 class ApiModel {
 
-    private $loginApi;
-    private $secretKey;
+    protected $loginApi;
+    protected $secretKey;
 
     const API_HOST = "http://thirdparty.qonto.eu/v2/";
 
@@ -26,9 +26,9 @@ class ApiModel {
 
         $fullURL = self::API_HOST . $uri;
 
-        $res = $client->request($method, $uri, [
+        $res = $client->request($method, $fullURL, [
             'Authorization' => [$this->loginApi, $this->secretKey],
-            'body'          => $data
+            'form_params'   => $data
         ]);
 
         return ($res->getStatusCode() == 200) ? $res->getBody() : null;

@@ -8,7 +8,7 @@ use QontoClient\Entity\Organization as OrganizationEntity;
 class Organization extends ApiModel {
     
     public function getOrganisation() {
-        $data = $this->callApi('GET','organizations/' . $this->loginKey);
+        $data = $this->callApi('GET','organizations/' . $this->loginApi);
 
         $organization = new OrganizationEntity();
 
