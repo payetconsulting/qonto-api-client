@@ -1,0 +1,17 @@
+{
+    "name": "payetconsulting/qonto-api-client",
+    "description": "API Client - QONTO",
+    "authors": [
+        {
+            "name": "PAYET Damien",
+            "email": "damien.payet@live.fr"
+        }
+    ],
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+        "php": ">=5.4",
+        "guzzlehttp/guzzle": "^6.3"
+    }
+}
