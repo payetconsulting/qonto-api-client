@@ -15,11 +15,11 @@ class Client {
         $this->secretKey = $secretKey;
     }
 
-    public function getOrganisation() {
+    public function getOrganization() {
         $organization = new Organization();
-        $organization->setLoginApi($this->loginApi)
+        return $organization->setLoginApi($this->loginApi)
                      ->setSecretKey($this->secretKey)
-                     ->getOrganisation();
+                     ->getOrganization();
     }
 
 
